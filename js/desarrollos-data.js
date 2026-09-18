@@ -19,5 +19,32 @@ const desarrollos = [
     autor: 'cap-hector',
     commit: '6983cda',
     jiraUrl: null
+  },
+  // Ejemplos de las áreas mencionadas en la presentación del taller
+  // (slide "El mini-proyecto: sitio con huecos") — solo para mostrar cómo
+  // se ve el tracker antes de que el equipo empiece a registrar las suyas.
+  {
+    feature: 'Ejemplo: Header / nav',
+    autor: 'Ejemplo demo',
+    commit: null,
+    jiraUrl: null
+  },
+  {
+    feature: 'Ejemplo: Hero CTA',
+    autor: 'Ejemplo demo',
+    commit: null,
+    jiraUrl: null
+  },
+  {
+    feature: 'Ejemplo: Toggle de modo oscuro (en el demo de la presentación sería el ticket TALLER-14)',
+    autor: 'Ejemplo demo',
+    commit: null,
+    jiraUrl: null
+  },
+  {
+    feature: 'Ejemplo: Página 404',
+    autor: 'Ejemplo demo',
+    commit: null,
+    jiraUrl: null
   }
 ];
