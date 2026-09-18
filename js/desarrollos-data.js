@@ -18,7 +18,7 @@ const desarrollos = [
     feature: 'Ejemplo: año dinámico en el footer (demo, fuera de la lista del taller)',
     autor: 'cap-hector',
     commit: '6983cda',
-    jiraUrl: null
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1380'
   },
   // Ejemplos de las áreas mencionadas en la presentación del taller
   // (slide "El mini-proyecto: sitio con huecos") — solo para mostrar cómo
@@ -52,5 +52,17 @@ const desarrollos = [
     autor: 'David Barajas',
     commit: 'cecb040',
     jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1383'
+  },
+  {
+    feature: 'Nav responsive (menú hamburguesa en móvil)',
+    autor: 'Fernando Espinosa [MIC]',
+    commit: 'c69be37',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-565'
+  },
+  {
+    feature: 'Banner principal y footer del sitio (incluye área #7: links del footer)',
+    autor: 'arturoGodinez',
+    commit: '388dba9',
+    jiraUrl: null
   }
 ];

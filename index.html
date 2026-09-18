@@ -12,11 +12,15 @@
   <div id="scroll-progress" class="scroll-progress"></div>
 
   <!-- HEADER / NAV -->
-  <!-- TODO taller: el menú de navegación no es responsive, no colapsa en móvil. Falta agregar un botón "hamburguesa" que muestre/oculte los links en pantallas pequeñas (JS + CSS). -->
   <header class="site-header">
     <div class="container nav-wrapper">
       <a href="#hero" class="logo">Taller PD</a>
-      <nav class="main-nav">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav" class="main-nav">
         <ul>
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
@@ -34,10 +38,19 @@
   <!-- HERO -->
   <!-- TODO taller: falta el botón de llamada a la acción (CTA). Existe el markup pero no tiene funcionalidad — debe hacer scroll suave hasta #servicios al hacer click. -->
   <section id="hero" class="hero">
-    <div class="container">
+    <div class="container hero-inner">
+      <p class="hero-eyebrow">Taller práctico · MCP + Git + Jira</p>
       <h1>Bienvenido al taller de MCP + Git + Jira</h1>
-      <p>Un sitio de práctica para aprender el flujo completo de desarrollo end-to-end.</p>
-      <button id="cta-button" class="btn btn-primary">Ver servicios</button>
+      <p class="hero-lead">Un sitio de práctica para aprender el flujo completo de desarrollo end-to-end: del ticket de Jira a la rama, el commit, el pull request y la actualización del ticket.</p>
+      <div class="hero-actions">
+        <button id="cta-button" class="btn btn-primary">Ver servicios</button>
+        <a href="#progreso" class="btn btn-ghost">Ver progreso del taller</a>
+      </div>
+      <ul class="hero-highlights">
+        <li><strong>15</strong> áreas para implementar</li>
+        <li><strong>1</strong> flujo end-to-end por persona</li>
+        <li><strong>0</strong> dependencias que instalar</li>
+      </ul>
     </div>
   </section>
 
@@ -177,16 +190,32 @@
   </section>
 
   <!-- FOOTER -->
-  <!-- TODO taller: los links del footer están vacíos (href="#"). Deben apuntar a anclas reales de la página (#hero, #servicios, #testimonios, #contacto). -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">Taller PD</a>
+        <p>Sitio de práctica del equipo para aprender desarrollo end-to-end con Claude conectado a MCP: Jira para el ticket, GitHub para el código.</p>
+      </div>
+      <nav class="footer-col" aria-label="Navegación del sitio">
+        <h3>Navegación</h3>
+        <ul class="footer-links">
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer-col">
+        <h3>El taller</h3>
+        <ul class="footer-links">
+          <li><a href="#progreso">Progreso en vivo</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+          <li><a href="https://github.com/compusoluciones-pdigitales/taller-pd" target="_blank" rel="noopener">Repositorio</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
       <p>&copy; <span id="footer-year">2026</span> Taller PD. Proyecto de práctica.</p>
-      <ul class="footer-links">
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Servicios</a></li>
-        <li><a href="#">Testimonios</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
     </div>
   </footer>
 
