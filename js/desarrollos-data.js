@@ -94,5 +94,11 @@ const desarrollos = [
     autor: 'Joel Valtierra',
     commit: 'c47f0cd',
     jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-566'
+  },
+  {
+    feature: 'Página 404 (título y copy)',
+    autor: 'OrlandoTaf',
+    commit: '2f45256',
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1386'
   }
 ];
