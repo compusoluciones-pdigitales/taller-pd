@@ -67,8 +67,8 @@ const desarrollos = [
   },
   {
     feature: 'Toggle de modo oscuro con persistencia',
-    autor: 'OrlandoTaf',
-    commit: '5cf5d3e',
-    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1384'
+    autor: 'Jesús Arreola [GDL]',
+    commit: 'ccc4ff0',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-564'
   }
 ];
