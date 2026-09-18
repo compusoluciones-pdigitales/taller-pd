@@ -219,12 +219,146 @@ h1, h2, h3 {
   line-height: 1.2;
 }
 
+/* 404 */
 .hero.not-found {
-  padding: 140px 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: calc(100vh - 170px);
+  padding: 72px 0 88px;
 }
 
-.hero.not-found h1 {
-  font-size: 5rem;
+.hero.not-found .container {
+  width: 100%;
+}
+
+/* Manchas difuminadas de fondo: naranja del gato + azul de marca */
+.hero.not-found::before,
+.hero.not-found::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.hero.not-found::before {
+  width: 380px;
+  height: 380px;
+  background: #fdba74;
+  top: -140px;
+  left: -110px;
+}
+
+.hero.not-found::after {
+  width: 420px;
+  height: 420px;
+  background: #bfdbfe;
+  bottom: -180px;
+  right: -130px;
+}
+
+.not-found-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.cat-404 {
+  width: min(220px, 52vw);
+  height: auto;
+  display: block;
+  margin: 0 auto 16px;
+}
+
+.hero.not-found .not-found-code {
+  font-size: clamp(4.5rem, 17vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--color-primary), #f97316);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero.not-found .not-found-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.hero.not-found .not-found-text {
+  margin-bottom: 32px;
+}
+
+.not-found-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-ghost {
+  background: var(--color-bg);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Gatito: flota, mueve la cola y parpadea */
+.cat-float {
+  animation: cat-float 4s ease-in-out infinite;
+}
+
+.cat-tail {
+  transform-box: fill-box;
+  transform-origin: 0% 100%;
+  animation: cat-tail-wag 2.4s ease-in-out infinite;
+}
+
+.cat-eye {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cat-blink 5s ease-in-out infinite;
+}
+
+@keyframes cat-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes cat-tail-wag {
+  0%, 100% { transform: rotate(-8deg); }
+  50% { transform: rotate(10deg); }
+}
+
+@keyframes cat-blink {
+  0%, 90%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-float,
+  .cat-tail,
+  .cat-eye {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero.not-found {
+    padding: 48px 0 64px;
+  }
 }
 
 /* Buttons */

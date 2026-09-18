@@ -88,5 +88,11 @@ const desarrollos = [
     autor: 'rjimenezCS',
     commit: '862d3a7',
     jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1368'
+  },
+  {
+    feature: 'Página 404',
+    autor: 'Joel Valtierra',
+    commit: 'c47f0cd',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-566'
   }
 ];
