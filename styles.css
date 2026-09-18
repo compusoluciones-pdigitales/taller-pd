@@ -624,7 +624,7 @@ h1, h2, h3 {
 /* Dark mode target — TODO taller (theme.js): agregar reglas .dark-mode aquí */
 
 /* Banner y footer en móvil */
-@media (max-width: 768px) {
+@media (max-width: 720px) {
   .hero {
     padding: 64px 0;
   }
