@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Toggle de modo oscuro con persistencia',
+    autor: 'Manuel Correa [GDL]',
+    commit: 'c663f5e',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1365'
   }
 ];
