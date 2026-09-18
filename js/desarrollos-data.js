@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Toggle de modo oscuro con persistencia',
+    autor: 'YVELAZQU',
+    commit: 'c2ce47d',
+    jiraUrl: null
   }
 ];
