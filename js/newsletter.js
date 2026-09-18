@@ -1,6 +1,23 @@
-// TODO taller: el formulario de newsletter (#newsletter-form) no valida ni confirma.
-// Falta:
-// 1. En el submit, prevenir el envío por defecto (preventDefault).
-// 2. Validar el formato de #newsletter-email (regex simple o checkValidity()).
-// 3. Si es válido: mostrar mensaje de éxito en #newsletter-feedback y limpiar el input.
-//    Si es inválido: mostrar mensaje de error en #newsletter-feedback.
+const newsletterForm = document.getElementById('newsletter-form');
+const newsletterEmail = document.getElementById('newsletter-email');
+const newsletterFeedback = document.getElementById('newsletter-feedback');
+
+if (newsletterForm) {
+  newsletterForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const isValid = emailPattern.test(newsletterEmail.value.trim());
+
+    newsletterFeedback.classList.remove('success', 'error');
+
+    if (isValid) {
+      newsletterFeedback.textContent = '¡Gracias por suscribirte! Revisa tu correo para confirmar.';
+      newsletterFeedback.classList.add('success');
+      newsletterEmail.value = '';
+    } else {
+      newsletterFeedback.textContent = 'Ingresa un correo electrónico válido.';
+      newsletterFeedback.classList.add('error');
+    }
+  });
+}
