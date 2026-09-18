@@ -1,6 +1,22 @@
-// TODO taller: el menú de navegación no es responsive.
-// Falta:
-// 1. Agregar un botón "hamburguesa" al DOM (o en index.html dentro de .nav-wrapper) visible solo en móvil.
-// 2. Escuchar el click del botón y togglear una clase (ej. "nav-open") en .main-nav.
-// 3. En styles.css, agregar la regla @media que oculte .main-nav ul en móvil por defecto
-//    y la muestre cuando tenga la clase "nav-open".
+(function () {
+  var toggle = document.getElementById('nav-toggle');
+  var nav = document.getElementById('main-nav');
+  if (!toggle || !nav) return;
+
+  function setOpen(isOpen) {
+    nav.classList.toggle('nav-open', isOpen);
+    toggle.classList.toggle('is-active', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  }
+
+  toggle.addEventListener('click', function () {
+    setOpen(!nav.classList.contains('nav-open'));
+  });
+
+  var links = nav.querySelectorAll('a');
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener('click', function () {
+      setOpen(false);
+    });
+  }
+})();

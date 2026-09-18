@@ -12,11 +12,10 @@
   <div id="scroll-progress" class="scroll-progress"></div>
 
   <!-- HEADER / NAV -->
-  <!-- TODO taller: el menú de navegación no es responsive, no colapsa en móvil. Falta agregar un botón "hamburguesa" que muestre/oculte los links en pantallas pequeñas (JS + CSS). -->
   <header class="site-header">
     <div class="container nav-wrapper">
       <a href="#hero" class="logo">Taller PD</a>
-      <nav class="main-nav">
+      <nav class="main-nav" id="main-nav">
         <ul>
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
@@ -28,6 +27,11 @@
       <!-- TODO taller: el selector de idioma (#lang-toggle) no traduce nada. Falta togglear entre ES/EN los textos marcados con [data-i18n]. -->
       <button id="lang-toggle" class="lang-toggle" type="button">ES</button>
       <button id="dark-mode-toggle" class="theme-toggle" aria-label="Cambiar tema" type="button">🌙</button>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
