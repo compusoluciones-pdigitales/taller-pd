@@ -52,5 +52,11 @@ const desarrollos = [
     autor: 'Fernando Espinosa [MIC]',
     commit: 'c69be37',
     jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-565'
+  },
+  {
+    feature: 'Banner principal y footer del sitio (incluye área #7: links del footer)',
+    autor: 'arturoGodinez',
+    commit: '388dba9',
+    jiraUrl: null
   }
 ];
