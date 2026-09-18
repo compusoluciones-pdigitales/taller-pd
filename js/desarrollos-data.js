@@ -52,5 +52,11 @@ const desarrollos = [
     autor: 'Fernando Espinosa [MIC]',
     commit: 'c69be37',
     jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-565'
+  },
+  {
+    feature: 'Toggle de modo oscuro con persistencia',
+    autor: 'Jesús Arreola [GDL]',
+    commit: 'ccc4ff0',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-564'
   }
 ];
