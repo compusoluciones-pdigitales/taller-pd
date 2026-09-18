@@ -54,6 +54,12 @@ const desarrollos = [
     jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-565'
   },
   {
+    feature: 'Banner principal y footer del sitio (incluye área #7: links del footer)',
+    autor: 'arturoGodinez',
+    commit: '388dba9',
+    jiraUrl: null
+  },
+  {
     feature: 'Botón "volver arriba"',
     autor: 'rjimenezCS',
     commit: '862d3a7',
