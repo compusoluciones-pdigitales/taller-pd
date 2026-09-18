@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Nav responsive (menú hamburguesa en móvil)',
+    autor: 'arturoGodinez',
+    commit: '0086369',
+    jiraUrl: null
   }
 ];
