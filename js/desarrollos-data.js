@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Nav responsive (menú hamburguesa en móvil)',
+    autor: 'Ivan Guerrero [GDL]',
+    commit: '64fa81f',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-563'
   }
 ];
