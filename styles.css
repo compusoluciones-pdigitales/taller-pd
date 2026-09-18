@@ -621,7 +621,17 @@ h1, h2, h3 {
   border-top: 1px solid var(--color-border);
 }
 
-/* Dark mode target — TODO taller (theme.js): agregar reglas .dark-mode aquí */
+/* Dark mode */
+body.dark-mode {
+  --color-bg: #1f2933;
+  --color-text: #f5f7fa;
+  --color-surface: #2d3748;
+  --color-border: #4a5568;
+}
+
+body.dark-mode .footer-links a {
+  color: #cbd5e0;
+}
 
 /* Banner y footer en móvil */
 @media (max-width: 720px) {
