@@ -12,11 +12,15 @@
   <div id="scroll-progress" class="scroll-progress"></div>
 
   <!-- HEADER / NAV -->
-  <!-- TODO taller: el menú de navegación no es responsive, no colapsa en móvil. Falta agregar un botón "hamburguesa" que muestre/oculte los links en pantallas pequeñas (JS + CSS). -->
   <header class="site-header">
     <div class="container nav-wrapper">
       <a href="#hero" class="logo">Taller PD</a>
-      <nav class="main-nav">
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav" type="button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="main-nav" class="main-nav">
         <ul>
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
