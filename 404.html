@@ -15,9 +15,64 @@
 
   <section class="hero not-found">
     <div class="container">
-      <h1>404</h1>
-      <p>La página que buscas no existe. Reintenta, actualiza la página o vuelve más tarde.</p>
-      <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+      <div class="not-found-inner">
+
+        <svg class="cat-404" viewBox="0 0 200 200" role="img" aria-label="Ilustración de un gatito naranja sentado">
+          <ellipse cx="100" cy="188" rx="56" ry="7" fill="#1f2933" opacity="0.08"/>
+          <g class="cat-float">
+            <!-- cola -->
+            <path class="cat-tail" d="M150 166c26-4 34-26 22-44" fill="none" stroke="#f97316" stroke-width="14" stroke-linecap="round"/>
+            <!-- cuerpo -->
+            <path d="M100 104c-34 0-52 26-52 50 0 17 23 25 52 25s52-8 52-25c0-24-18-50-52-50z" fill="#f97316"/>
+            <ellipse cx="100" cy="150" rx="23" ry="27" fill="#fed7aa"/>
+            <ellipse cx="79" cy="175" rx="15" ry="8" fill="#fed7aa"/>
+            <ellipse cx="121" cy="175" rx="15" ry="8" fill="#fed7aa"/>
+            <!-- orejas -->
+            <polygon points="66,62 62,22 98,48" fill="#f97316"/>
+            <polygon points="134,62 138,22 102,48" fill="#f97316"/>
+            <polygon points="71,58 68,34 89,51" fill="#fdba74"/>
+            <polygon points="129,58 132,34 111,51" fill="#fdba74"/>
+            <!-- cabeza -->
+            <circle cx="100" cy="90" r="40" fill="#f97316"/>
+            <g stroke="#ea580c" stroke-width="5" stroke-linecap="round">
+              <path d="M90 60v11"/>
+              <path d="M100 56v13"/>
+              <path d="M110 60v11"/>
+            </g>
+            <!-- hocico -->
+            <ellipse cx="100" cy="107" rx="23" ry="14" fill="#fed7aa"/>
+            <!-- ojos -->
+            <circle class="cat-eye" cx="85" cy="89" r="5.5" fill="#1f2933"/>
+            <circle class="cat-eye" cx="115" cy="89" r="5.5" fill="#1f2933"/>
+            <!-- nariz y boca -->
+            <path d="M94 100h12l-6 7z" fill="#fb7185"/>
+            <g fill="none" stroke="#1f2933" stroke-width="2.5" stroke-linecap="round">
+              <path d="M100 107c-2 5-8 6-11 3"/>
+              <path d="M100 107c2 5 8 6 11 3"/>
+            </g>
+            <!-- bigotes -->
+            <g stroke="#ea580c" stroke-width="2.5" stroke-linecap="round">
+              <path d="M77 101 54 96"/>
+              <path d="M77 106 53 108"/>
+              <path d="M123 101 146 96"/>
+              <path d="M123 106 147 108"/>
+            </g>
+          </g>
+        </svg>
+
+        <h1 class="not-found-code">404</h1>
+        <p class="not-found-title">Este gatito se perdió… y la página también.</p>
+        <p class="not-found-text">
+          La dirección que buscas no existe o cambió de lugar. El camino de vuelta
+          está a un solo click.
+        </p>
+
+        <div class="not-found-actions">
+          <a href="index.html" class="btn btn-primary">Volver al inicio</a>
+          <a href="index.html#contacto" class="btn btn-ghost">Reportar el problema</a>
+        </div>
+
+      </div>
     </div>
   </section>
 
