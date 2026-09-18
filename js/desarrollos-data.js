@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Página 404',
+    autor: 'Joel Valtierra',
+    commit: 'c47f0cd',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-566'
   }
 ];
