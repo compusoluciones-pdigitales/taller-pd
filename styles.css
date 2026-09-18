@@ -188,6 +188,129 @@ h1, h2, h3 {
   background: var(--color-surface);
 }
 
+/* Marcas */
+.marcas {
+  padding: 72px 0;
+}
+
+.marcas h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  gap: 32px;
+}
+
+@media (max-width: 700px) {
+  .marcas-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+.marca-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.marca-item:hover,
+.marca-item:focus-visible {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 24px -12px rgba(0, 0, 0, 0.25);
+}
+
+.marca-item img {
+  max-width: 100%;
+  height: 64px;
+  object-fit: contain;
+}
+
+.marca-item.avatar-item {
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+}
+
+.marca-item.avatar-item svg {
+  width: 88px;
+  height: 88px;
+  transition: transform 0.25s ease-out, filter 0.25s ease-out;
+  cursor: pointer;
+}
+
+.marca-item.avatar-item:hover svg,
+.marca-item.avatar-item:focus-visible svg {
+  transform: scale(1.15) rotate(-4deg);
+  filter: drop-shadow(0 6px 10px rgba(37, 99, 235, 0.35));
+}
+
+.marca-item.avatar-item.avatar-hidden {
+  visibility: hidden;
+}
+
+/* Explosión al hacer click en el avatar */
+.avatar-explosion {
+  position: fixed;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.avatar-explosion-ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 88px;
+  height: 88px;
+  margin: -44px 0 0 -44px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #7ed957, rgba(126, 217, 87, 0) 70%);
+  animation: avatar-explode-ring 0.7s ease-out forwards;
+}
+
+.avatar-explosion-particle {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #7ed957;
+  animation: avatar-explode-particle 0.7s ease-out forwards;
+}
+
+@keyframes avatar-explode-ring {
+  0% {
+    transform: scale(0.3);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(60);
+    opacity: 0;
+  }
+}
+
+@keyframes avatar-explode-particle {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(var(--angle-x) * 60vmax), calc(var(--angle-y) * 60vmax)) scale(0);
+    opacity: 0;
+  }
+}
+
 /* Contacto */
 .contacto {
   padding: 72px 0;
