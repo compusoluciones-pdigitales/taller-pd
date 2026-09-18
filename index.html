@@ -41,6 +41,15 @@
     </div>
   </section>
 
+  <!-- PROGRESO DEL TALLER (live tracker, no es un TODO — funciona out of the box) -->
+  <section id="progreso" class="progreso">
+    <div class="container">
+      <h2>Progreso del taller</h2>
+      <p class="progreso-hint">Se actualiza al hacer <code>git pull</code> + refrescar la página.</p>
+      <div id="progreso-list" class="progreso-list"></div>
+    </div>
+  </section>
+
   <!-- ESTADÍSTICAS -->
   <!-- TODO taller: los números deben animarse (contar de 0 hasta el valor de data-target) cuando la sección entra en pantalla. Actualmente se quedan en 0. Usar IntersectionObserver + requestAnimationFrame o setInterval. -->
   <section id="stats" class="stats">
@@ -185,6 +194,8 @@
   <!-- TODO taller: el botón "volver arriba" (#scroll-top-btn) no aparece ni funciona. Falta: mostrarlo solo cuando el usuario haya scrolleado hacia abajo, y al hacer click volver suavemente al inicio. -->
   <button id="scroll-top-btn" class="scroll-top-btn hidden" type="button" aria-label="Volver arriba">↑</button>
 
+  <script src="js/desarrollos-data.js"></script>
+  <script src="js/desarrollos-render.js"></script>
   <script src="js/theme.js"></script>
   <script src="js/hero.js"></script>
   <script src="js/cards.js"></script>

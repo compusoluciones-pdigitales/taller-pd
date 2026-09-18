@@ -39,10 +39,7 @@ Cada persona elige una y sigue el flujo completo (Jira → rama → implementaci
 
 Busca el comentario `<!-- TODO taller: ... -->` o `// TODO taller: ...` en el archivo correspondiente para ver el detalle de qué falta implementar.
 
-## 🚀 Desarrollos
+## 🚀 Progreso en vivo
 
-Cada vez que alguien resuelve una feature, se agrega una fila aquí (ver regla en `CLAUDE.md`).
-
-| Feature | Desarrollado por | Fecha | Commit |
-|---------|-------------------|-------|--------|
+El sitio incluye una sección **"Progreso del taller"** que muestra en vivo qué feature se desarrolló, quién y el link al ticket de Jira (si aplica). Se actualiza automáticamente al hacer `git pull` y refrescar el navegador — ver regla de cómo se llena en `CLAUDE.md`.
 
