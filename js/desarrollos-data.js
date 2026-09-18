@@ -100,5 +100,11 @@ const desarrollos = [
     autor: 'OrlandoTaf',
     commit: '2f45256',
     jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1386'
+  },
+  {
+    feature: 'Modal de detalle al hacer click en una tarjeta de servicio',
+    autor: 'YVELAZQU',
+    commit: 'f2c7961',
+    jiraUrl: null
   }
 ];
