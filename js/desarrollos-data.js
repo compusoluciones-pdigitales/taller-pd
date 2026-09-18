@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Acordeón de preguntas frecuentes (FAQ)',
+    autor: 'David Barajas',
+    commit: 'cecb040',
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1383'
   }
 ];
