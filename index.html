@@ -8,6 +8,9 @@
 </head>
 <body>
 
+  <!-- TODO taller: falta la barra de progreso de scroll. El contenedor #scroll-progress existe pero siempre se ve vacío/plano. -->
+  <div id="scroll-progress" class="scroll-progress"></div>
+
   <!-- HEADER / NAV -->
   <!-- TODO taller: el menú de navegación no es responsive, no colapsa en móvil. Falta agregar un botón "hamburguesa" que muestre/oculte los links en pantallas pequeñas (JS + CSS). -->
   <header class="site-header">
@@ -18,9 +21,12 @@
           <li><a href="#hero">Inicio</a></li>
           <li><a href="#servicios">Servicios</a></li>
           <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contacto">Contacto</a></li>
         </ul>
       </nav>
+      <!-- TODO taller: el selector de idioma (#lang-toggle) no traduce nada. Falta togglear entre ES/EN los textos marcados con [data-i18n]. -->
+      <button id="lang-toggle" class="lang-toggle" type="button">ES</button>
       <button id="dark-mode-toggle" class="theme-toggle" aria-label="Cambiar tema" type="button">🌙</button>
     </div>
   </header>
@@ -32,6 +38,25 @@
       <h1>Bienvenido al taller de MCP + Git + Jira</h1>
       <p>Un sitio de práctica para aprender el flujo completo de desarrollo end-to-end.</p>
       <button id="cta-button" class="btn btn-primary">Ver servicios</button>
+    </div>
+  </section>
+
+  <!-- ESTADÍSTICAS -->
+  <!-- TODO taller: los números deben animarse (contar de 0 hasta el valor de data-target) cuando la sección entra en pantalla. Actualmente se quedan en 0. Usar IntersectionObserver + requestAnimationFrame o setInterval. -->
+  <section id="stats" class="stats">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <span class="stat-number" data-target="500">0</span>
+        <p>Proyectos entregados</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="120">0</span>
+        <p>Clientes activos</p>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" data-target="30">0</span>
+        <p>Personas en el equipo</p>
+      </div>
     </div>
   </section>
 
@@ -54,6 +79,14 @@
           <p>Cada tarjeta debería generarse desde JS, no copiarse y pegarse.</p>
         </div>
       </div>
+      <!-- TODO taller: falta el modal de detalle. Al hacer click en una tarjeta (.card) debe abrirse #service-modal mostrando el título y la descripción de esa tarjeta. -->
+      <div id="service-modal" class="modal hidden">
+        <div class="modal-content">
+          <button id="service-modal-close" class="modal-close" type="button" aria-label="Cerrar">&times;</button>
+          <h3 id="service-modal-title"></h3>
+          <p id="service-modal-body"></p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -65,6 +98,47 @@
       <div id="testimonios-grid" class="cards-grid">
         <!-- Contenedor vacío a propósito -->
       </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <!-- TODO taller: el acordeón no funciona. Falta que al hacer click en .faq-question se muestre/oculte su .faq-answer correspondiente (y opcionalmente cerrar las demás). -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Cómo me uno al taller?</button>
+          <div class="faq-answer">
+            <p>Elige una feature de la lista del README, crea tu ticket en Jira y tu rama.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Necesito experiencia previa?</button>
+          <div class="faq-answer">
+            <p>No, cada feature está pensada para ser resuelta con ayuda de Claude.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button">¿Puedo elegir más de una feature?</button>
+          <div class="faq-answer">
+            <p>Sí, si terminas antes que el grupo puedes tomar otra de la lista.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <!-- TODO taller: el formulario no valida el email ni muestra confirmación. Falta: validar formato de email y, si es válido, mostrar un mensaje de éxito en #newsletter-feedback (sin recargar la página). -->
+  <section id="newsletter" class="newsletter">
+    <div class="container">
+      <h2>Recibe novedades del taller</h2>
+      <form id="newsletter-form" novalidate>
+        <input type="email" id="newsletter-email" placeholder="tu@email.com">
+        <button type="submit" class="btn btn-primary">Suscribirme</button>
+      </form>
+      <p id="newsletter-feedback" class="newsletter-feedback"></p>
     </div>
   </section>
 
@@ -108,11 +182,21 @@
     </div>
   </footer>
 
+  <!-- TODO taller: el botón "volver arriba" (#scroll-top-btn) no aparece ni funciona. Falta: mostrarlo solo cuando el usuario haya scrolleado hacia abajo, y al hacer click volver suavemente al inicio. -->
+  <button id="scroll-top-btn" class="scroll-top-btn hidden" type="button" aria-label="Volver arriba">↑</button>
+
   <script src="js/theme.js"></script>
   <script src="js/hero.js"></script>
   <script src="js/cards.js"></script>
   <script src="js/testimonials.js"></script>
   <script src="js/contact-form.js"></script>
   <script src="js/nav.js"></script>
+  <script src="js/scroll-progress.js"></script>
+  <script src="js/scroll-top.js"></script>
+  <script src="js/faq.js"></script>
+  <script src="js/newsletter.js"></script>
+  <script src="js/service-modal.js"></script>
+  <script src="js/counter.js"></script>
+  <script src="js/i18n.js"></script>
 </body>
 </html>
