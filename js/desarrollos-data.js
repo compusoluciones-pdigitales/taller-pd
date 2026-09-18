@@ -51,6 +51,6 @@ const desarrollos = [
     feature: 'Toggle de modo oscuro con persistencia',
     autor: 'YVELAZQU',
     commit: 'c2ce47d',
-    jiraUrl: null
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1385'
   }
 ];
