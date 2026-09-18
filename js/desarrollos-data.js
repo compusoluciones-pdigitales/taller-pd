@@ -82,5 +82,11 @@ const desarrollos = [
     autor: 'Clara Villarreal [GDL]',
     commit: 'c8c4c2a',
     jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1367'
+  },
+  {
+    feature: 'Botón "volver arriba"',
+    autor: 'rjimenezCS',
+    commit: '862d3a7',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1368'
   }
 ];
