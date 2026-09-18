@@ -361,6 +361,16 @@ h1, h2, h3 {
   }
 }
 
+/* Práctica de plataformas (404) */
+.practica {
+  padding: 72px 0;
+}
+
+.practica h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 /* Buttons */
 .btn {
   display: inline-block;
