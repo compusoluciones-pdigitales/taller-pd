@@ -87,7 +87,7 @@ const desarrollos = [
     feature: 'Botón "volver arriba"',
     autor: 'Marco Hernandez',
     commit: '6631096',
-    jiraUrl: null
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1387'
   },
   {
     feature: 'Página 404',
