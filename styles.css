@@ -8,6 +8,13 @@
   --color-error: #dc2626;
 }
 
+body.dark-mode {
+  --color-bg: #1a202c;
+  --color-text: #e2e8f0;
+  --color-surface: #2d3748;
+  --color-border: #4a5568;
+}
+
 * {
   margin: 0;
   padding: 0;

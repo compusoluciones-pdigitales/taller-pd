@@ -1,5 +1,18 @@
-// TODO taller: el botón de modo oscuro (#dark-mode-toggle) no cambia el tema ni persiste la preferencia.
-// Falta:
-// 1. Al hacer click, togglear una clase (ej. "dark-mode") en <body> o <html>.
-// 2. En styles.css, agregar las reglas de estilo para el estado ".dark-mode".
-// 3. Guardar la preferencia en localStorage y aplicarla al cargar la página.
+(function () {
+  const STORAGE_KEY = 'theme-preference';
+  const toggleBtn = document.getElementById('dark-mode-toggle');
+
+  function applyTheme(isDark) {
+    document.body.classList.toggle('dark-mode', isDark);
+  }
+
+  const savedPreference = localStorage.getItem(STORAGE_KEY);
+  applyTheme(savedPreference === 'dark');
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', function () {
+      const isDark = document.body.classList.toggle('dark-mode');
+      localStorage.setItem(STORAGE_KEY, isDark ? 'dark' : 'light');
+    });
+  }
+})();
