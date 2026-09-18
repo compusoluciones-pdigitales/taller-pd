@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Sección de testimonios (renderizado desde array JS)',
+    autor: 'Rodrigo Loy [GDL]',
+    commit: 'c14c301',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1366'
   }
 ];
