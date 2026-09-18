@@ -18,7 +18,7 @@ const desarrollos = [
     feature: 'Ejemplo: año dinámico en el footer (demo, fuera de la lista del taller)',
     autor: 'cap-hector',
     commit: '6983cda',
-    jiraUrl: null
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1380'
   },
   // Ejemplos de las áreas mencionadas en la presentación del taller
   // (slide "El mini-proyecto: sitio con huecos") — solo para mostrar cómo
