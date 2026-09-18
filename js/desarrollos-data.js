@@ -67,9 +67,21 @@ const desarrollos = [
   },
   {
     feature: 'Toggle de modo oscuro con persistencia',
-    autor: 'OrlandoTaf',
-    commit: '5cf5d3e',
-    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1384'
+    autor: 'Jesús Arreola [GDL]',
+    commit: 'ccc4ff0',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-564'
+  },
+  {
+    feature: 'Sección de testimonios (renderizado desde array JS)',
+    autor: 'Rodrigo Loy [GDL]',
+    commit: 'c14c301',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1366'
+  },
+  {
+    feature: 'Formulario de newsletter con validación',
+    autor: 'Clara Villarreal [GDL]',
+    commit: 'c8c4c2a',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1367'
   },
   {
     feature: 'Botón "volver arriba"',
