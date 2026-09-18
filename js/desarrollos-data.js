@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Formulario de newsletter con validación',
+    autor: 'Clara Villarreal [GDL]',
+    commit: 'c8c4c2a',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1367'
   }
 ];
