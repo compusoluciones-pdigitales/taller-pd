@@ -2,7 +2,10 @@
 // Cada Claude, al terminar de implementar una feature y hacer commit, agrega
 // un objeto a este array (ver regla en CLAUDE.md). No es un TODO del taller,
 // es la data que alimenta el tablero en vivo.
-//
+
+// Base para armar el link al commit en GitHub (repo owner/name).
+const GITHUB_REPO_URL = 'https://github.com/compusoluciones-pdigitales/taller-pd';
+
 // Forma de cada entrada:
 // {
 //   feature: 'Nombre de la feature tal como aparece en el README',

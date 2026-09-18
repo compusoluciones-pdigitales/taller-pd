@@ -23,6 +23,7 @@ Pasos:
      jiraUrl: 'https://tu-dominio.atlassian.net/browse/ABC-123' // o null si no se creó ticket
    }
    ```
+   El `commit` se muestra en el sitio como link directo a `GITHUB_REPO_URL/commit/<hash>` (constante ya definida en `js/desarrollos-data.js`) — no hace falta armar esa URL a mano. Si `jiraUrl` es `null`, el sitio muestra "Sin ticket Jira" en su lugar; cuando se agregue el link, aparece automáticamente el botón "Ver ticket Jira".
 3. Haz commit de este cambio (puede ir en el mismo commit de la implementación o en uno separado tipo `docs: update progreso tracker`), siempre después de confirmar que el commit de la feature ya existe.
 4. Si la entrada para esa feature ya existe (alguien la repitió o la corrigió), actualiza ese objeto en vez de duplicarlo.
 5. Push del cambio para que al hacer `git pull` + refrescar el navegador, la sección `#progreso` del sitio se actualice en vivo.
