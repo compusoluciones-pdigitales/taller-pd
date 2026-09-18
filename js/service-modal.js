@@ -1,8 +1,33 @@
-// TODO taller: el modal de detalle de servicio (#service-modal) no se abre.
-// Falta:
-// 1. Por cada tarjeta .card dentro de #servicios-grid, escuchar el click.
-// 2. Al hacer click, copiar el título (h3) y la descripción (p) de esa tarjeta
-//    dentro de #service-modal-title y #service-modal-body, y quitar la clase
-//    "hidden" de #service-modal.
-// 3. Al hacer click en #service-modal-close (o fuera del .modal-content), volver
-//    a agregar la clase "hidden".
+(function () {
+  const grid = document.getElementById('servicios-grid');
+  const modal = document.getElementById('service-modal');
+  const modalTitle = document.getElementById('service-modal-title');
+  const modalBody = document.getElementById('service-modal-body');
+  const modalClose = document.getElementById('service-modal-close');
+
+  if (!grid || !modal) return;
+
+  grid.querySelectorAll('.card').forEach((card) => {
+    card.addEventListener('click', () => {
+      const title = card.querySelector('h3');
+      const description = card.querySelector('p');
+      modalTitle.textContent = title ? title.textContent : '';
+      modalBody.textContent = description ? description.textContent : '';
+      modal.classList.remove('hidden');
+    });
+  });
+
+  function closeModal() {
+    modal.classList.add('hidden');
+  }
+
+  if (modalClose) {
+    modalClose.addEventListener('click', closeModal);
+  }
+
+  modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+})();
