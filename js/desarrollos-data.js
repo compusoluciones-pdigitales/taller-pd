@@ -48,6 +48,12 @@ const desarrollos = [
     jiraUrl: null
   },
   {
+    feature: 'Acordeón de preguntas frecuentes (FAQ)',
+    autor: 'David Barajas',
+    commit: 'cecb040',
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1383'
+  },
+  {
     feature: 'Nav responsive (menú hamburguesa en móvil)',
     autor: 'Fernando Espinosa [MIC]',
     commit: 'c69be37',
@@ -58,5 +64,35 @@ const desarrollos = [
     autor: 'arturoGodinez',
     commit: '388dba9',
     jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1369'
+  },
+  {
+    feature: 'Toggle de modo oscuro con persistencia',
+    autor: 'Jesús Arreola [GDL]',
+    commit: 'ccc4ff0',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-564'
+  },
+  {
+    feature: 'Sección de testimonios (renderizado desde array JS)',
+    autor: 'Rodrigo Loy [GDL]',
+    commit: 'c14c301',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1366'
+  },
+  {
+    feature: 'Formulario de newsletter con validación',
+    autor: 'Clara Villarreal [GDL]',
+    commit: 'c8c4c2a',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1367'
+  },
+  {
+    feature: 'Botón "volver arriba"',
+    autor: 'rjimenezCS',
+    commit: '862d3a7',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1368'
+  },
+  {
+    feature: 'Página 404',
+    autor: 'Joel Valtierra',
+    commit: 'c47f0cd',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-566'
   }
 ];
