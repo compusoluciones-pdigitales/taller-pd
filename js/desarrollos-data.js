@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Nav responsive (menú hamburguesa en móvil)',
+    autor: 'anlumendez',
+    commit: '11f9474',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SC20-478'
   }
 ];
