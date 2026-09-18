@@ -10,4 +10,11 @@
 //   commit: 'hash corto del commit',
 //   jiraUrl: 'https://tu-dominio.atlassian.net/browse/ABC-123' // opcional, null si no aplica
 // }
-const desarrollos = [];
+const desarrollos = [
+  {
+    feature: 'Ejemplo: año dinámico en el footer (demo, fuera de la lista del taller)',
+    autor: 'cap-hector',
+    commit: '6983cda',
+    jiraUrl: null
+  }
+];
