@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taller PD — Sitio de práctica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <!-- TODO taller: el menú de navegación no es responsive, no colapsa en móvil. Falta agregar un botón "hamburguesa" que muestre/oculte los links en pantallas pequeñas (JS + CSS). -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="logo">Taller PD</a>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#hero">Inicio</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#testimonios">Testimonios</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <button id="dark-mode-toggle" class="theme-toggle" aria-label="Cambiar tema" type="button">🌙</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <!-- TODO taller: falta el botón de llamada a la acción (CTA). Existe el markup pero no tiene funcionalidad — debe hacer scroll suave hasta #servicios al hacer click. -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <h1>Bienvenido al taller de MCP + Git + Jira</h1>
+      <p>Un sitio de práctica para aprender el flujo completo de desarrollo end-to-end.</p>
+      <button id="cta-button" class="btn btn-primary">Ver servicios</button>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <!-- TODO taller: las tarjetas están hardcodeadas en el HTML. Deben renderizarse dinámicamente desde un array de datos en app.js (ver variable `servicios`) usando JS (createElement o template strings + innerHTML). -->
+  <section id="servicios" class="servicios">
+    <div class="container">
+      <h2>Nuestros servicios</h2>
+      <div id="servicios-grid" class="cards-grid">
+        <div class="card">
+          <h3>Servicio hardcodeado 1</h3>
+          <p>Este contenido debería venir de un array de datos en JavaScript, no estar escrito directo en el HTML.</p>
+        </div>
+        <div class="card">
+          <h3>Servicio hardcodeado 2</h3>
+          <p>Reemplaza este bloque por un render dinámico basado en datos.</p>
+        </div>
+        <div class="card">
+          <h3>Servicio hardcodeado 3</h3>
+          <p>Cada tarjeta debería generarse desde JS, no copiarse y pegarse.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <!-- TODO taller: la sección está vacía, solo el contenedor. Hay que agregar un array de testimonios en app.js y renderizarlos aquí (nombre, texto, opcionalmente rol/empresa). -->
+  <section id="testimonios" class="testimonios">
+    <div class="container">
+      <h2>Lo que dicen de nosotros</h2>
+      <div id="testimonios-grid" class="cards-grid">
+        <!-- Contenedor vacío a propósito -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULARIO DE CONTACTO -->
+  <!-- TODO taller: el formulario existe pero no tiene validación. Falta validar: nombre no vacío, email con formato válido, mensaje con mínimo de caracteres. Mostrar mensajes de error y evitar el submit si hay errores. -->
+  <section id="contacto" class="contacto">
+    <div class="container">
+      <h2>Contáctanos</h2>
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name">
+          <span class="error-message" id="name-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <span class="error-message" id="email-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+          <span class="error-message" id="message-error"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <!-- TODO taller: los links del footer están vacíos (href="#"). Deben apuntar a anclas reales de la página (#hero, #servicios, #testimonios, #contacto). -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Taller PD. Proyecto de práctica.</p>
+      <ul class="footer-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Testimonios</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/theme.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/cards.js"></script>
+  <script src="js/testimonials.js"></script>
+  <script src="js/contact-form.js"></script>
+  <script src="js/nav.js"></script>
+</body>
+</html>
