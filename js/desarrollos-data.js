@@ -85,9 +85,9 @@ const desarrollos = [
   },
   {
     feature: 'Botón "volver arriba"',
-    autor: 'rjimenezCS',
-    commit: '862d3a7',
-    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1368'
+    autor: 'Marco Hernandez',
+    commit: '6631096',
+    jiraUrl: null
   },
   {
     feature: 'Página 404',
