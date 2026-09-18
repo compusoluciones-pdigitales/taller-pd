@@ -18,7 +18,7 @@ const desarrollos = [
     feature: 'Ejemplo: año dinámico en el footer (demo, fuera de la lista del taller)',
     autor: 'cap-hector',
     commit: '6983cda',
-    jiraUrl: null
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1380'
   },
   // Ejemplos de las áreas mencionadas en la presentación del taller
   // (slide "El mini-proyecto: sitio con huecos") — solo para mostrar cómo
@@ -46,6 +46,48 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Acordeón de preguntas frecuentes (FAQ)',
+    autor: 'David Barajas',
+    commit: 'cecb040',
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1383'
+  },
+  {
+    feature: 'Nav responsive (menú hamburguesa en móvil)',
+    autor: 'Fernando Espinosa [MIC]',
+    commit: 'c69be37',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-565'
+  },
+  {
+    feature: 'Banner principal y footer del sitio (incluye área #7: links del footer)',
+    autor: 'arturoGodinez',
+    commit: '388dba9',
+    jiraUrl: null
+  },
+  {
+    feature: 'Toggle de modo oscuro con persistencia',
+    autor: 'Jesús Arreola [GDL]',
+    commit: 'ccc4ff0',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-564'
+  },
+  {
+    feature: 'Sección de testimonios (renderizado desde array JS)',
+    autor: 'Rodrigo Loy [GDL]',
+    commit: 'c14c301',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1366'
+  },
+  {
+    feature: 'Formulario de newsletter con validación',
+    autor: 'Clara Villarreal [GDL]',
+    commit: 'c8c4c2a',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1367'
+  },
+  {
+    feature: 'Botón "volver arriba"',
+    autor: 'rjimenezCS',
+    commit: '862d3a7',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1368'
   },
   {
     feature: 'Página 404',
