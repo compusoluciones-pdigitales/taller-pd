@@ -1,22 +1,16 @@
-(function () {
-  var toggle = document.getElementById('nav-toggle');
-  var nav = document.getElementById('main-nav');
-  if (!toggle || !nav) return;
+const navToggle = document.getElementById('nav-toggle');
+const mainNav = document.getElementById('main-nav');
 
-  function setOpen(isOpen) {
-    nav.classList.toggle('nav-open', isOpen);
-    toggle.classList.toggle('is-active', isOpen);
-    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  }
-
-  toggle.addEventListener('click', function () {
-    setOpen(!nav.classList.contains('nav-open'));
+if (navToggle && mainNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('nav-open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
   });
 
-  var links = nav.querySelectorAll('a');
-  for (var i = 0; i < links.length; i++) {
-    links[i].addEventListener('click', function () {
-      setOpen(false);
+  mainNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('nav-open');
+      navToggle.setAttribute('aria-expanded', 'false');
     });
-  }
-})();
+  });
+}
