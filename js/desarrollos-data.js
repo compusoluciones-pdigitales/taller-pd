@@ -46,5 +46,11 @@ const desarrollos = [
     autor: 'Ejemplo demo',
     commit: null,
     jiraUrl: null
+  },
+  {
+    feature: 'Nav responsive (menú hamburguesa en móvil)',
+    autor: 'Fernando Espinosa [MIC]',
+    commit: 'c69be37',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-565'
   }
 ];
