@@ -52,5 +52,11 @@ const desarrollos = [
     autor: 'Fernando Espinosa [MIC]',
     commit: 'c69be37',
     jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-565'
+  },
+  {
+    feature: 'Botón "volver arriba"',
+    autor: 'rjimenezCS',
+    commit: '862d3a7',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1368'
   }
 ];
