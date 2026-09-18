@@ -707,6 +707,139 @@ h1, h2, h3 {
   display: none;
 }
 
+.scroll-top-btn.launching {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* Rocket launch effect al volver arriba */
+.scroll-rocket {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  width: 34px;
+  height: 92px;
+  z-index: 20;
+  transform: translateY(0) rotate(0deg);
+  transition: transform 0.9s cubic-bezier(0.55, 0, 0.85, 0.45);
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(255, 150, 50, 0.55));
+}
+
+.scroll-rocket.flying {
+  transform: translateY(-100vh) rotate(0deg);
+}
+
+.scroll-rocket.arrived {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.rocket-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.rocket-flame {
+  transform-origin: 30px 88px;
+  animation: flame-flicker 0.12s ease-in-out infinite alternate;
+}
+
+.rocket-flame-inner {
+  animation: flame-flicker-inner 0.09s ease-in-out infinite alternate;
+}
+
+@keyframes flame-flicker {
+  0% { transform: scaleY(0.82) scaleX(0.92); }
+  100% { transform: scaleY(1.18) scaleX(1.06); }
+}
+
+@keyframes flame-flicker-inner {
+  0% { opacity: 0.65; transform: scaleY(0.9); }
+  100% { opacity: 1; transform: scaleY(1.1); }
+}
+
+/* Líneas de aire alrededor del cohete mientras vuela */
+.speed-line {
+  position: absolute;
+  top: -6px;
+  width: 2px;
+  height: 18px;
+  border-radius: 2px;
+  background: linear-gradient(to bottom, transparent, rgba(148, 163, 184, 0.9), transparent);
+  opacity: 0;
+}
+
+.scroll-rocket.flying .speed-line {
+  animation: speed-stream 0.4s linear infinite;
+}
+
+.speed-line-a { left: -8px; animation-delay: 0s; }
+.speed-line-b { left: 3px; animation-delay: 0.13s; }
+.speed-line-c { right: -8px; animation-delay: 0.07s; }
+.speed-line-d { right: 3px; animation-delay: 0.2s; }
+
+@keyframes speed-stream {
+  0% { transform: translateY(-10px); opacity: 0; }
+  35% { opacity: 0.9; }
+  100% { transform: translateY(90px); opacity: 0; }
+}
+
+.scroll-moon {
+  position: fixed;
+  top: 22px;
+  right: 26px;
+  font-size: 2rem;
+  line-height: 1;
+  z-index: 19;
+  opacity: 0;
+  pointer-events: none;
+  animation: moon-crash 0.7s ease forwards;
+}
+
+.scroll-boom {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  font-size: 2.6rem;
+  line-height: 1;
+  z-index: 21;
+  opacity: 0;
+  pointer-events: none;
+  animation: boom-pop 0.7s ease forwards;
+}
+
+@keyframes moon-crash {
+  0% { opacity: 0; transform: scale(0.4); }
+  20% { opacity: 1; transform: scale(1.1); }
+  60% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.6); }
+}
+
+@keyframes boom-pop {
+  0% { opacity: 0; transform: scale(0.2) rotate(0deg); }
+  30% { opacity: 1; transform: scale(1.3) rotate(10deg); }
+  100% { opacity: 0; transform: scale(1.8) rotate(-10deg); }
+}
+
+/* Título del hero: se "sopla" hacia la izquierda cuando el cohete explota */
+.hero-letter {
+  display: inline-block;
+  will-change: transform;
+}
+
+.hero-letter.letter-blast {
+  animation: letter-blast 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes letter-blast {
+  0% { transform: translateX(0) rotate(0deg); }
+  22% { transform: translateX(calc(var(--blast-x, 40px) * -1)) rotate(-14deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--color-border);
