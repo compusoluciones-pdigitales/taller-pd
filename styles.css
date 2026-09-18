@@ -545,6 +545,14 @@ h1, h2, h3 {
   min-height: 1.2em;
 }
 
+.newsletter-feedback.success {
+  color: var(--color-success, #1a7f37);
+}
+
+.newsletter-feedback.error {
+  color: var(--color-error, #cf222e);
+}
+
 /* Scroll to top */
 .scroll-top-btn {
   position: fixed;
