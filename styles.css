@@ -71,6 +71,54 @@ h1, h2, h3 {
   color: var(--color-primary);
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--color-text);
+}
+
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: flex;
+    order: 1;
+  }
+
+  .main-nav {
+    order: 3;
+    flex-basis: 100%;
+    display: none;
+  }
+
+  .main-nav.nav-open {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  .nav-wrapper {
+    flex-wrap: wrap;
+  }
+}
+
 .theme-toggle,
 .lang-toggle {
   border: 1px solid var(--color-border);
@@ -574,76 +622,6 @@ h1, h2, h3 {
 }
 
 /* Dark mode target — TODO taller (theme.js): agregar reglas .dark-mode aquí */
-
-/* Nav responsive (móvil) */
-.nav-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  gap: 5px;
-  border: 1px solid var(--color-border);
-  background: var(--color-surface);
-  border-radius: 8px;
-  width: 40px;
-  height: 40px;
-  padding: 0 9px;
-  cursor: pointer;
-}
-
-.nav-toggle-bar {
-  display: block;
-  height: 2px;
-  width: 100%;
-  background: var(--color-text);
-  border-radius: 2px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-}
-
-.nav-toggle.is-open .nav-toggle-bar:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
-}
-
-.nav-toggle.is-open .nav-toggle-bar:nth-child(2) {
-  opacity: 0;
-}
-
-.nav-toggle.is-open .nav-toggle-bar:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
-}
-
-@media (max-width: 768px) {
-  .nav-toggle {
-    display: flex;
-    margin-left: auto;
-    margin-right: 8px;
-  }
-
-  .main-nav ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    gap: 0;
-    background: var(--color-bg);
-    border-bottom: 1px solid var(--color-border);
-    padding: 8px 24px 16px;
-  }
-
-  .main-nav.nav-open ul {
-    display: flex;
-  }
-
-  .main-nav li {
-    border-top: 1px solid var(--color-border);
-  }
-
-  .main-nav a {
-    display: block;
-    padding: 12px 0;
-  }
-}
 
 /* Banner y footer en móvil */
 @media (max-width: 768px) {
