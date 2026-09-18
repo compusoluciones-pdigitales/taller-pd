@@ -479,4 +479,14 @@ h1, h2, h3 {
   color: var(--color-primary);
 }
 
-/* Dark mode target — TODO taller (theme.js): agregar reglas .dark-mode aquí */
+.dark-mode {
+  --color-bg: #1f2933;
+  --color-text: #f5f7fa;
+  --color-surface: #2d3748;
+  --color-border: #3e4c5e;
+}
+
+.dark-mode .site-footer,
+.dark-mode .footer-links a {
+  color: #cbd2d9;
+}
