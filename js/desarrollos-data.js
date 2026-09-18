@@ -57,6 +57,6 @@ const desarrollos = [
     feature: 'Banner principal y footer del sitio (incluye área #7: links del footer)',
     autor: 'arturoGodinez',
     commit: '388dba9',
-    jiraUrl: null
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1369'
   }
 ];
