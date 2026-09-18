@@ -70,5 +70,11 @@ const desarrollos = [
     autor: 'Jesús Arreola [GDL]',
     commit: 'ccc4ff0',
     jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-564'
+  },
+  {
+    feature: 'Sección de testimonios (renderizado desde array JS)',
+    autor: 'Rodrigo Loy [GDL]',
+    commit: 'c14c301',
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1366'
   }
 ];
