@@ -63,7 +63,7 @@ const desarrollos = [
     feature: 'Banner principal y footer del sitio (incluye área #7: links del footer)',
     autor: 'arturoGodinez',
     commit: '388dba9',
-    jiraUrl: null
+    jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1369'
   },
   {
     feature: 'Toggle de modo oscuro con persistencia',
@@ -88,5 +88,11 @@ const desarrollos = [
     autor: 'rjimenezCS',
     commit: '862d3a7',
     jiraUrl: 'https://tesselar.atlassian.net/browse/SSC-1368'
+  },
+  {
+    feature: 'Página 404',
+    autor: 'Joel Valtierra',
+    commit: 'c47f0cd',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-566'
   }
 ];
