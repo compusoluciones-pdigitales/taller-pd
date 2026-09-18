@@ -48,6 +48,12 @@ const desarrollos = [
     jiraUrl: null
   },
   {
+    feature: 'Acordeón de preguntas frecuentes (FAQ)',
+    autor: 'David Barajas',
+    commit: 'cecb040',
+    jiraUrl: 'https://siclikcomercio.atlassian.net/browse/SC2026-1383'
+  },
+  {
     feature: 'Nav responsive (menú hamburguesa en móvil)',
     autor: 'Fernando Espinosa [MIC]',
     commit: 'c69be37',
@@ -58,6 +64,12 @@ const desarrollos = [
     autor: 'arturoGodinez',
     commit: '388dba9',
     jiraUrl: null
+  },
+  {
+    feature: 'Toggle de modo oscuro con persistencia',
+    autor: 'Jesús Arreola [GDL]',
+    commit: 'ccc4ff0',
+    jiraUrl: 'https://nuevoclik.atlassian.net/browse/SS2026-564'
   },
   {
     feature: 'Sección de testimonios (renderizado desde array JS)',

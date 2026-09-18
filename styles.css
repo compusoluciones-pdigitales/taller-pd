@@ -621,7 +621,38 @@ h1, h2, h3 {
   border-top: 1px solid var(--color-border);
 }
 
-/* Dark mode target — TODO taller (theme.js): agregar reglas .dark-mode aquí */
+/* Dark mode */
+body.dark-mode {
+  --color-bg: #1a202c;
+  --color-text: #e2e8f0;
+  --color-primary: #3b82f6;
+  --color-primary-dark: #60a5fa;
+  --color-surface: #242c3d;
+  --color-border: #374151;
+  --color-error: #f87171;
+}
+
+body.dark-mode .hero p,
+body.dark-mode .card p,
+body.dark-mode .progreso-hint,
+body.dark-mode .progreso-empty,
+body.dark-mode .progreso-autor,
+body.dark-mode .site-footer,
+body.dark-mode .footer-links a {
+  color: #9aa5b1;
+}
+
+body.dark-mode .progreso-jira-pending {
+  color: #6b7280;
+}
+
+body.dark-mode .stats {
+  color: #fff;
+}
+
+body.dark-mode .btn-primary {
+  color: #fff;
+}
 
 /* Banner y footer en móvil */
 @media (max-width: 720px) {
